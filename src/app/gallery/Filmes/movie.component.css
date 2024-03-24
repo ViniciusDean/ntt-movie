@@ -1,0 +1,92 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.conteudo {
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #000000eb;
+
+}
+
+.filme {
+    position: relative;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    border: 10px #f80505 solid; 
+    color: #ffffff;
+
+
+}
+.filme i{
+    color:red
+}
+
+.filme .detalhe {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.imagem img {
+    width: 220px;
+}
+
+.filme a {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: aquamarine;
+}
+
+#pontuacao {
+    bottom: 10px;
+    right: 10px;
+    position: absolute;
+    font-size: 30px;
+    color:#ebc400
+}
+
+.filme h2 {
+    text-align: center;
+    width: 80%;
+    font-size: 20px;
+}
+
+.descricao {
+    width: 1000px;
+    height: auto;
+    color: #ffffff;
+
+}
+
+.elementos {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #ffffff;
+
+}
+
+.elementos h3 {
+    font-size: 30px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.botao {
+    width: 1000px;
+}
+
+.botao button {
+    cursor: pointer;
+}

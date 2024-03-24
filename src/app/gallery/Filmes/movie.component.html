@@ -1,0 +1,31 @@
+<div class="conteudo">
+    <div class="botao">
+        <button class="btn btn-danger" (click)="retornar()">Retornar</button>
+    </div>
+    <div class="filme" *ngIf="filme">
+        <div class="imagem">
+            <img [src]="filme.Poster" alt="filme.Title">
+        </div>
+        <div class="detalhe">
+            <h2>{{filme.Title}}</h2>
+            <p id="pontuacao">{{filme.imdbRating}}</p>
+            <p>Tipo: {{filme.Genre}}</p>
+            <p>Duração: {{filme.Runtime}}</p>
+            <p>Idioma: {{filme.Language}}</p>
+            <p>Ano de lançamento: {{filme.Year}}</p>
+            <p>Data de estreia: {{filme.Released}}</p>
+                </div>
+    </div>
+    <div class="descricao" *ngIf="filme">
+        <p>{{filme.Plot}}</p>
+    </div>
+
+    <div class="elementos" *ngIf="filme">
+        <h3>Mais Informações</h3>
+        <ul>
+            <li>Diretor: {{filme.Director}}</li>
+            <li>Autor: {{filme.Writer}}</li>
+            <li>Premiações: {{filme.Awards}}</li>
+        </ul>
+    </div>
+</div>

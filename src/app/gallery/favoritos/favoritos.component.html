@@ -1,0 +1,18 @@
+<div class="conteudo">
+    <div class="botao">
+        <button class="btn btn-danger" (click)="retornar()">Retornar</button>
+    </div>
+    <div class="filmes">
+        <div class="filme" *ngFor="let filme of favoritos">
+            <div class="titulo">
+                
+                <h2>{{filme.Title}}</h2>
+            </div>  
+            <img [src]="filme.Poster" alt="filme.Title">
+            <p>{{filme.Year}}</p>
+            <i class="bi bi-heart-fill" (click)="removeFilme(filme)"></i>      
+            
+            <button class="btn btn-danger" (click)="detalhes(filme.imdbID)">Detalhes</button>
+              </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="conteudo">
+
+
+    <div class="search">
+        <input type="text" placeholder="Insira o nome do filme" [(ngModel)]="nomeFilme">
+        <button class="btn btn-danger" type="submit" (click)="pesquisarFilme()">Pesquisar</button>
+        <div class="favoritos">
+            <button class="btn btn-warning" type="submit" (click)="gotofavoritos()">Favoritos</button>
+            
+          </div>
+    </div>
+
+    <div class="filmes">
+        <div class="filme" *ngFor="let filme of filmes">
+            <div class="titulo">
+                <h2>{{filme.Title}}                 
+                </h2>    
+            </div>  
+            <img [src]="filme.Poster" alt="{{filme.Title}}">
+            <p>{{filme.Year}}</p>
+            <i [class]="'bi ' + (filme.isFilled ? 'bi-heart-fill' : 'bi-heart')" (click)="addFavoritos(filme)"></i>        
+
+            <button class="btn btn-danger" (click)="detalhes(filme.imdbID)">Detalhes</button>
+        </div>
+    </div>
+
+</div>
